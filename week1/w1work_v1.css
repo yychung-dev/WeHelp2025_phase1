@@ -120,7 +120,7 @@ main {
   width: calc(33.33%-10px);
   /* background-color: lightblue; */
   height: 200px;
-  background-image: url(w1-pictures/backgroundimg.jpg);
+  background-image: url(week1/w1-pictures/backgroundimg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
