@@ -59,9 +59,11 @@ main {
   justify-content: center;
   align-items: center;
 }
+
 .welcome-text {
   font-size: 2rem;
   font-weight: bold;
+  /* white-space: nowrap; */
 }
 
 main {
@@ -201,7 +203,7 @@ main {
 }
 
 /* phone: 360px < screen width <= 600px */
-@media (min-width: 361px) and (max-width: 600px) {
+@media (max-width: 600px) {
   main {
     width: 90%;
     margin: 0 auto;
@@ -275,6 +277,10 @@ main {
   .cross.active {
     right: 20px;
     z-index: 1000;
+  }
+
+  .welcome-text {
+    font-size: 36px;
   }
 
   /*small boxes*/
