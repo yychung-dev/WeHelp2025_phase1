@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>歡迎光臨</title>
+  </head>
+  <body>
+    <h2>歡迎光臨，這是會員頁</h2>
+    <div class="firstblock">
+      <p>恭喜您，成功登入系統</p>
+    </div>
+    <div class="secondblock">
+      <a href="javascript: connectSignout()">登出系統</a>
+    </div>
+  </body>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    h2 {
+      color: white;
+      background-color: #223344;
+      height: 90px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .firstblock {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+    .secondblock {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+    }
+    p,
+    a {
+      font-size: 20px;
+    }
+  </style>
+  <script>
+    async function connectSignout() {
+      let resp = await fetch("/signout", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      }).then((response) => response.json());
+      window.location.href = resp;
+    }
+  </script>
+</html>

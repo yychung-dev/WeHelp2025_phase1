@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>歡迎光臨</title>
+  </head>
+  <body>
+    <h2>歡迎光臨，請輸入帳號密碼</h2>
+    <div class="firstblock">
+        <div class="signinblock">
+            <h3>登入系統</h3>
+            <form>帳號 <input type="text" name="accountname" id="accountname"/></form>
+            <form>密碼 <input type="text" name="password" id="password"/></form>
+
+            <lable>
+                同意條款 <input type="checkbox" id="chkbox" name="chkbox" />
+            </lable></br>
+            
+            <button type="button" onclick="checkCheckbox();">登入</button></div>
+    </div>
+    <hr>
+    <div class="secondblock">
+        <div class="signinblock">
+            <h3>計算正整數的平方</h3>
+            <form action="">正整數 <input type="text" name="integer" id="number"/></form>
+            <button type="button" onclick="calculate();">計算</button></div>
+    </div>
+  </body>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    h2 {
+      color: white;
+      background-color: #223344;
+      height: 90px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align:center;
+    }
+    .firstblock,.secondblock{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top:30px;
+      margin-bottom: 50px;
+    }
+    hr {border-color:rgb(239, 237, 237);}
+  </style>
+  <script>
+  function checkCheckbox() {
+    let checkbox = document.getElementById('chkbox');
+    if (!checkbox.checked) {
+      alert('Please check the checkbox first');
+    } else {
+      connectSignin();
+    }
+  }
+  async function connectSignin(){
+    acc=document.getElementById("accountname").value;
+		pwd=document.getElementById("password").value;
+
+    let htmlResult = await fetch("/signin", {method:'POST', 
+      headers: { 'Content-Type': 'application/json','Accept': 'application/json',},body: JSON.stringify({username:acc,	password:pwd})})
+      .then(response => response.json()) 
+      window.location.href = htmlResult;
+    
+  } 
+  async function calculate(){
+    number=document.getElementById("number").value;
+    let htmlResult = await fetch("/square/"+number, {method:'GET'})
+      // window.location.href = htmlResult;
+    
+  } 
+  </script>
+</html>
