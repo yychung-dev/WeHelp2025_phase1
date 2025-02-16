@@ -34,7 +34,7 @@ INSERT INTO member(name, username, password, follower_count) VALUES('dan', 'dand
 
 ![3-2](screenshots/3-2.png)   
 
-<img src="screenshots/3-2.png" width="600" height="600" />
+<img src="screenshots/3-2.png" width="1000" height="1000" />
 
 3. SELECT * FROM member ORDER BY time DESC;  
 
