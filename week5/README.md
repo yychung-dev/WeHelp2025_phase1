@@ -18,6 +18,8 @@ CREATE TABLE member(
     time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Signup Time'  
 );  
 
+![2-2](screenshots/2-2.png)   
+
 ## Task 3
 1.
 INSERT INTO member(name, username, password) VALUES('test', 'test', 'test');  
@@ -26,26 +28,36 @@ INSERT INTO member(name, username, password, follower_count) VALUES('bill', 'bil
 INSERT INTO member(name, username, password, follower_count) VALUES('calvin', 'calvinc', '56', 3);  
 INSERT INTO member(name, username, password, follower_count) VALUES('dan', 'dand', '78', 4);  
 
-2. SELECT * FROM member;
-  
+![3-1](screenshots/3-1.png)   
+
+
+2. SELECT * FROM member;  
+
+![3-2](screenshots/3-2.png)   
+
 3. SELECT * FROM member ORDER BY time DESC;  
 
+![3-3](screenshots/3-3.png)   
 
 4. SELECT * FROM member ORDER BY time DESC LIMIT 3 OFFSET 1;  
 
+![3-4](screenshots/3-4.png)   
 
 5. SELECT * FROM member WHERE username= 'test';  
 
+![3-5](screenshots/3-5.png)   
 
 6. SELECT * FROM member WHERE name LIKE '%es%';  
 
+![3-6](screenshots/3-6.png)   
 
 7. SELECT * FROM member WHERE username= binary 'test' and password= binary 'test';  
 
+![3-7](screenshots/3-7.png)   
 
 8. UPDATE member SET name= 'test2' WHERE username= 'test';  
 
-
+![3-8](screenshots/3-8.png)   
 
 
 
