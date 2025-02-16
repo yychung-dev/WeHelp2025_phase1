@@ -65,13 +65,19 @@ INSERT INTO member(name, username, password, follower_count) VALUES('dan', 'dand
 ## Task 4
 1. SELECT COUNT(*) FROM member;  
 
+![4-1](screenshots/4-1.png)  
 
 2. SELECT SUM(follower_count) FROM member;  
 
+![4-2](screenshots/4-2.png)  
 
 3. SELECT AVG(follower_count) FROM member;  
 
+![4-3](screenshots/4-3.png)  
+
 4. SELECT AVG(follower_count) FROM (SELECT follower_count FROM member ORDER BY follower_count DESC LIMIT 2) AS member_first2;  
+
+![4-4](screenshots/4-4.png)  
 
 
 
@@ -88,21 +94,27 @@ CREATE TABLE message(
     FOREIGN KEY(member_id) REFERENCES member(id)  
 );  
 
+![5-1](screenshots/5-1.png)   
+
+
+![5-1-2](screenshots/5-1-2.png)   
 
 
 2. SELECT message.*, member.name FROM member INNER JOIN message ON member.id=message.member_id;  
 
-
+![5-2](screenshots/5-2.png)   
 
 3. SELECT message.*, member.name FROM member INNER JOIN message ON member.id=message.member_id WHERE member.username='test';  
 
-
+![5-3](screenshots/5-3.png)   
 
 4. SELECT AVG(message.like_count) FROM message INNER JOIN member ON message.member_id=member.id WHERE member.username='test';  
 
-
+![5-4](screenshots/5-4.png)   
 
 5. SELECT member.username, AVG(message.like_count) FROM message INNER JOIN member ON message.member_id=member.id GROUP BY member.username;  
+
+![5-5](screenshots/5-5.png)   
 
 
 
