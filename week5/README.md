@@ -3,7 +3,7 @@
 ## Task 2
 1. CREATE DATABASE website;  
 
-![2-1](screenshots/2-1.PNG)  
+![2-1](screenshots/2-1.png)  
 
 
 
