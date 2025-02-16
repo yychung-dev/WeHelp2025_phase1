@@ -1,4 +1,4 @@
-# Week 5 Assignment (Task 2 - Task 5)
+# Week 5 - Assignment (Task 2 - Task 5)
 
 ## Task 2
 1. CREATE DATABASE website;    
