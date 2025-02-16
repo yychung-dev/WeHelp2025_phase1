@@ -52,21 +52,30 @@ INSERT INTO member(name, username, password, follower_count) VALUES('dan', 'dand
 
 ![3-4](screenshots/3-4.png)   
 
+
 5. SELECT * FROM member WHERE username= 'test';  
+
 
 ![3-5](screenshots/3-5.png)   
 
+
 6. SELECT * FROM member WHERE name LIKE '%es%';  
+
 
 ![3-6](screenshots/3-6.png)   
 
+
 7. SELECT * FROM member WHERE username= binary 'test' and password= binary 'test';  
+
 
 ![3-7](screenshots/3-7.png)   
 
+
 8. UPDATE member SET name= 'test2' WHERE username= 'test';  
 
+
 ![3-8](screenshots/3-8.png)   
+
 
 
 
@@ -74,19 +83,27 @@ INSERT INTO member(name, username, password, follower_count) VALUES('dan', 'dand
 ## Task 4
 1. SELECT COUNT(*) FROM member;  
 
+
 ![4-1](screenshots/4-1.png)  
+
 
 2. SELECT SUM(follower_count) FROM member;  
 
+
 ![4-2](screenshots/4-2.png)  
+
 
 3. SELECT AVG(follower_count) FROM member;  
 
+
 ![4-3](screenshots/4-3.png)  
+
 
 4. SELECT AVG(follower_count) FROM (SELECT follower_count FROM member ORDER BY follower_count DESC LIMIT 2) AS member_first2;  
 
+
 ![4-4](screenshots/4-4.png)  
+
 
 
 
@@ -103,27 +120,39 @@ CREATE TABLE message(
     FOREIGN KEY(member_id) REFERENCES member(id)  
 );  
 
+
 ![5-1](screenshots/5-1.png)   
+
 
 
 ![5-1-2](screenshots/5-1-2.png)   
 
 
+
 2. SELECT message.*, member.name FROM member INNER JOIN message ON member.id=message.member_id;  
+
 
 ![5-2](screenshots/5-2.png)   
 
+
 3. SELECT message.*, member.name FROM member INNER JOIN message ON member.id=message.member_id WHERE member.username='test';  
+
 
 ![5-3](screenshots/5-3.png)   
 
+
 4. SELECT AVG(message.like_count) FROM message INNER JOIN member ON message.member_id=member.id WHERE member.username='test';  
+
 
 ![5-4](screenshots/5-4.png)   
 
+
 5. SELECT member.username, AVG(message.like_count) FROM message INNER JOIN member ON message.member_id=member.id GROUP BY member.username;  
 
+
 ![5-5](screenshots/5-5.png)   
+
+
 
 
 
