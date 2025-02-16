@@ -3,7 +3,10 @@
 ## Task 2
 1. CREATE DATABASE website;    
 
+
 <img src="screenshots/2-1.png" width="600" height="600" />  
+
+
 
 2. USE website;
  
@@ -16,6 +19,7 @@ CREATE TABLE member(
     time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Signup Time'  
 );  
 
+
 ![2-2](screenshots/2-2.png)   
 
 
@@ -27,20 +31,24 @@ INSERT INTO member(name, username, password, follower_count) VALUES('bill', 'bil
 INSERT INTO member(name, username, password, follower_count) VALUES('calvin', 'calvinc', '56', 3);  
 INSERT INTO member(name, username, password, follower_count) VALUES('dan', 'dand', '78', 4);  
 
+
 ![3-1](screenshots/3-1.png)   
 
 
 2. SELECT * FROM member;  
 
+
 ![3-2](screenshots/3-2.png)   
 
-<img src="screenshots/3-2.png" width="1000" height="1000" />
+
 
 3. SELECT * FROM member ORDER BY time DESC;  
+
 
 ![3-3](screenshots/3-3.png)   
 
 4. SELECT * FROM member ORDER BY time DESC LIMIT 3 OFFSET 1;  
+
 
 ![3-4](screenshots/3-4.png)   
 
