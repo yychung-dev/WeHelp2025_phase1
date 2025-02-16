@@ -3,7 +3,7 @@
 ## Task 2
 1. CREATE DATABASE website;    
 
-<img src="screenshots/2-1.png" width="600" height="600" />
+<img src="screenshots/2-1.png" width="600" height="600" />  
 
 2. USE website;
  
@@ -17,6 +17,8 @@ CREATE TABLE member(
 );  
 
 ![2-2](screenshots/2-2.png)   
+
+<img src="screenshots/2-2.png" width="600" height="600" />  
 
 ## Task 3
 1.
