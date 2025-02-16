@@ -1,9 +1,7 @@
 # Week 5 Assignment (Task 2 - Task 5)
 
 ## Task 2
-1. CREATE DATABASE website;  
-
-![2-1](screenshots/2-1.png)  
+1. CREATE DATABASE website;    
 
 <img src="screenshots/2-1.png" width="600" height="600" />
 
