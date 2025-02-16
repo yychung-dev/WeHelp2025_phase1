@@ -5,7 +5,7 @@
 
 ![2-1](screenshots/2-1.png)  
 
-<img src="screenshots/2-1.png" width="100" height="100" />
+<img src="screenshots/2-1.png" width="600" height="600" />
 
 2. USE website;
  
