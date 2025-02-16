@@ -3,8 +3,8 @@
 ## Task 2
 1. CREATE DATABASE website;  
 
-2.
-USE website;  
+2. USE website;
+ 
 CREATE TABLE member(  
     id BIGINT PRIMARY KEY AUTO_INCREMENT COMMENT 'Unique ID',  
     name VARCHAR(255) NOT NULL COMMENT 'Name',  
