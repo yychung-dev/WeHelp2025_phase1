@@ -18,7 +18,7 @@ CREATE TABLE member(
 
 ![2-2](screenshots/2-2.png)   
 
-<img src="screenshots/2-2.png" width="600" height="600" />  
+<img src="screenshots/2-2.png" width="1000" height="1000" />  
 
 ## Task 3
 1.
