@@ -1,9 +1,7 @@
 # Week 5 Assignment (Task 2 - Task 5)
 
 ## Task 2
-1.
-SHOW DATABASES;  
-CREATE DATABASE website;  
+1. CREATE DATABASE website;  
 
 2.
 USE website;  
