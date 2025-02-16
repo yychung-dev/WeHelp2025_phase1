@@ -1,13 +1,13 @@
 # Week 5 Assignment (Task 2 - Task 5)
 
 ## Task 2
-1. CREATE DATABASE website;  
+### 1. CREATE DATABASE website;  
 
 ![2-1](screenshots/2-1.png)  
 
 
 
-2. USE website;
+### 2. USE website;
  
 CREATE TABLE member(  
     id BIGINT PRIMARY KEY AUTO_INCREMENT COMMENT 'Unique ID',  
