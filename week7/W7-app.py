@@ -84,7 +84,7 @@ async def search(username:str, request:Request):
 async def search(updateName:updateName,request:Request): 
     hasSignedin=request.session.get("SIGNED-IN")
     if (not hasSignedin):
-        return {"error":true}
+        return {"error":True}
     else:     
         try:
             input_new_name=updateName.name
