@@ -81,7 +81,7 @@ async def search(username:str, request:Request):
 
 # 7-3
 @app.patch("/api/member")
-async def search(updateName:updateName,request:Request): 
+async def update(updateName:updateName,request:Request): 
     hasSignedin=request.session.get("SIGNED-IN")
     if (not hasSignedin):
         return {"error":True}
