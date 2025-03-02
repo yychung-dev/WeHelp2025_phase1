@@ -86,23 +86,23 @@ async def search(updateName:updateName,request:Request):
     if (not hasSignedin):
         return {"error":true}
     else:     
-        input_new_name=updateName.name
-        current_username=request.session.get("username")
+        try:
+            input_new_name=updateName.name
+            current_username=request.session.get("username")
 
-        cursor=con.cursor()        
-        cursor.execute("UPDATE member SET name=%s WHERE username=%s",[input_new_name,current_username])
-        con.commit()
+            cursor=con.cursor()        
+            cursor.execute("UPDATE member SET name=%s WHERE username=%s",[input_new_name,current_username])
+            con.commit()
 
-        cursor.execute("SELECT name FROM member WHERE username=%s", [current_username,])
-        data=cursor.fetchone()
-        updated_name=data[0]
+            request.session["name"]=input_new_name
+            
+            result={"ok":True}
+        except Exception:
+            result={"error":True}
+        
+        return result    
 
-        if(updated_name==input_new_name):
-            request.session["name"]=updated_name
-            return {"ok":True}
-        else:
-            return {"error":True}
- 
+
 
 # 6-2   
 @app.post("/signup")
